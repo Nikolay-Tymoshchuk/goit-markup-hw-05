@@ -9,6 +9,8 @@
 
   --item-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   --color-gradient: rgba(47, 48, 58, 0.4);
+  --primary-animation-duration: 250ms;
+  --primary-animation-tf: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -79,23 +81,23 @@ p {
 }
 
 .h-color {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 .h-fill {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 .h-border {
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 .h-bgc {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 .h-shadow {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 /*========================================Header start here==========================================*/
@@ -535,7 +537,7 @@ p {
 
   transform: translate(-50%, -50%) scale(1);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 .backdrop .close-button {
@@ -553,20 +555,17 @@ p {
 }
 
 .modal-close-icon {
-  /* position: absolute; */
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: #fff;
-  /* transform: scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .modal-close-icon:hover {
   box-shadow: var(--item-shadow);
   animation-name: scalesChange;
-  animation-duration: 300ms;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: var(--primary-animation-duration);
+  animation-timing-function: var(--primary-animation-tf);
   animation-iteration-count: 1;
 }
 
@@ -695,7 +694,7 @@ p {
   background-color: rgba(33, 150, 243, 0.9);
   pointer-events: none;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--primary-animation-duration) var(--primary-animation-tf);
 }
 
 .filter-items > .list-item:hover .image-overlay,
