@@ -548,13 +548,13 @@ p {
   margin: 0;
   border-color: transparent;
   background-color: transparent;
-  position: absolute;
   padding: 0;
   top: 8px;
   right: 8px;
 }
 
 .modal-close-icon {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 50%;
